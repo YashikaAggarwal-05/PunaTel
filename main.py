@@ -1,95 +1,60 @@
-from tkinter import*
+from tkinter import *
 from PIL import ImageTk, Image
 from tkinter import messagebox
 
-def handle_login():
-    email = email_input.get()
-    password = password_input.get()
-
-    if email == 'ericsson@gmail.com' and password == '123':
-        messagebox.showinfo('Lessgoo', 'Welcome')
-    else:
-        messagebox.showinfo('OOPSS!!','Login failed')
 
 
 
+
+
+
+# Main window
 tele = Tk()
-
 tele.title('Punatel Login')
-#tele.iconbitmap('logo.png')
-tele.minsize(200,250)
+tele.minsize(200, 250)
 tele.configure(background='pink')
 
-icon = PhotoImage('D:/Personal_DOCS/Ericsson/logo.png')
+# Title and logo
 img1 = Image.open('logo.png')
 resize_img = img1.resize((200, 100))
 img1 = ImageTk.PhotoImage(resize_img)
-img_label = Label(tele, image = img1)
-img_label.pack(pady=(40,20))
+img_label = Label(tele, image=img1)
+img_label.pack(pady=(40, 20))
 
 text_label = Label(tele, text='Punatel', fg='black', bg='pink')
 text_label.pack()
 text_label.config(font=('Babus neue', 50))
 
-icon2 = PhotoImage('D:/Personal_DOCS/Ericsson/admin.png')
+# Frame for buttons and icons
+button_frame = Frame(tele, bg='pink')
+button_frame.pack(pady=(20, 20))
+
+# Admin login icon and button
+admin_frame = Frame(button_frame, bg='pink')
+admin_frame.grid(row=0, column=0, padx=20)
+
 img2 = Image.open('admin.png')
 resize_img2 = img2.resize((50, 50))
 img2 = ImageTk.PhotoImage(resize_img2)
-img2_label = Label(tele, image = img2)
-img2_label.pack(pady=(40,20))
+img2_label = Label(admin_frame, image=img2, bg='pink')
+img2_label.pack(pady=(10, 5))
 
-text_label2 = Label(tele, text='Admin Login', fg='black', bg='pink')
-text_label2.pack()
-text_label2.config(font=('Babus neue', 20))
-
-admin_login = Button(tele, text='Admin Login', fg='black', bg='green', width=10, height=2, command=handle_login)
-admin_login.pack(pady=(10,10))
+admin_login = Button(admin_frame, text='Admin Login', fg='black', bg='green', width=15, height=2, command=open_admin_login)
+admin_login.pack()
 admin_login.config(font=('Babus neue', 15))
 
-aemail_label = Label(tele, text='Enter Email', fg='black', bg='pink' )
-aemail_label.config(font=('Babus neue', 20))
-aemail_label.pack(pady=(20,25))
+# User login icon and button
+user_frame = Frame(button_frame, bg='pink')
+user_frame.grid(row=0, column=1, padx=20)
 
-aemail_input = Entry(tele, width=70)
-aemail_input.pack(ipady=10, pady=(5,50))
-#email_input.pack(ipadx=70)
-
-apassword_label = Label(tele, text='Enter Password', fg='black', bg='pink' )
-apassword_label.config(font=('Babus neue', 20))
-apassword_label.pack(pady=(10,15))
-
-apassword_input = Entry(tele, width=70)
-apassword_input.pack(ipady=10, pady=(1,10))
-
-icon3 = PhotoImage('D:/Personal_DOCS/Ericsson/user.png')
 img3 = Image.open('user.png')
 resize_img3 = img3.resize((50, 50))
 img3 = ImageTk.PhotoImage(resize_img3)
-img3_label = Label(tele, image = img3)
-img3_label.pack(pady=(40,20))
+img3_label = Label(user_frame, image=img3, bg='pink')
+img3_label.pack(pady=(10, 5))
 
-user_login = Button(tele, text='User Login', fg='black', bg='green', width=10, height=2, command=handle_login)
-user_login.pack(pady=(10,10))
+user_login = Button(user_frame, text='User Login', fg='black', bg='green', width=15, height=2, command=open_user_login)
+user_login.pack()
 user_login.config(font=('Babus neue', 15))
-
-uemail_label = Label(tele, text='Enter Email', fg='black', bg='pink' )
-uemail_label.config(font=('Babus neue', 20))
-uemail_label.pack(pady=(20,25))
-
-uemail_input = Entry(tele, width=70)
-uemail_input.pack(ipady=10, pady=(5,50))
-#email_input.pack(ipadx=70)
-
-upassword_label = Label(tele, text='Enter Password', fg='black', bg='pink' )
-upassword_label.config(font=('Babus neue', 20))
-upassword_label.pack(pady=(10,15))
-
-upassword_input = Entry(tele, width=70)
-upassword_input.pack(ipady=10, pady=(1,10))
-
-login_button =  Button(tele,text='Login now', fg='black', bg='Teal', width=20, height=2, command=handle_login)
-login_button.config(font=('Babus neue', 15))
-login_button.pack(pady=(20,25))
-
 
 tele.mainloop()
