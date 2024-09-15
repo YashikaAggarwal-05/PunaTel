@@ -2,11 +2,87 @@ from tkinter import *
 from PIL import ImageTk, Image
 from tkinter import messagebox
 
+# Admin login window
+def open_admin_login():
+    admin_window = Toplevel(tele)
+    admin_window.title("Admin Login")
+    admin_window.configure(background='pink')
+    admin_window.geometry("500x400")
 
+    # Welcome message for Admin
+    welcome_label = Label(admin_window, text="Welcome to Admin Login", fg='black', bg='pink')
+    welcome_label.config(font=('Babus neue', 25))
+    welcome_label.pack(pady=(20, 25))
 
+    # Email and password fields for Admin
+    email_label = Label(admin_window, text='Enter Email', fg='black', bg='pink')
+    email_label.config(font=('Babus neue', 20))
+    email_label.pack(pady=(20, 25))
 
+    email_input = Entry(admin_window, width=50)
+    email_input.pack(ipady=10, pady=(5, 15))
 
+    password_label = Label(admin_window, text='Enter Password', fg='black', bg='pink')
+    password_label.config(font=('Babus neue', 20))
+    password_label.pack(pady=(10, 15))
 
+    password_input = Entry(admin_window, width=50, show="*")
+    password_input.pack(ipady=10, pady=(5, 15))
+
+    # Function to handle login logic
+    def handle_login():
+        email = email_input.get()
+        password = password_input.get()
+
+        if email == 'ericsson@gmail.com' and password == '123':
+            messagebox.showinfo('Success', 'Login successful!')
+        else:
+            messagebox.showinfo('Error', 'Login failed!')
+
+    # Add login button
+    login_button = Button(admin_window, text="Login", command=handle_login, bg="green", fg="white")
+    login_button.pack(pady=(20, 20))
+
+# User login window
+def open_user_login():
+    user_window = Toplevel(tele)
+    user_window.title("User Login")
+    user_window.configure(background='pink')
+    user_window.geometry("500x400")
+
+    # Welcome message for User
+    welcome_label = Label(user_window, text="Welcome to User Login Page", fg='black', bg='pink')
+    welcome_label.config(font=('Babus neue', 25))
+    welcome_label.pack(pady=(20, 25))
+
+    # Email and password fields for User
+    email_label = Label(user_window, text='Enter Email', fg='black', bg='pink')
+    email_label.config(font=('Babus neue', 20))
+    email_label.pack(pady=(20, 25))
+
+    email_input = Entry(user_window, width=50)
+    email_input.pack(ipady=10, pady=(5, 15))
+
+    password_label = Label(user_window, text='Enter Password', fg='black', bg='pink')
+    password_label.config(font=('Babus neue', 20))
+    password_label.pack(pady=(10, 15))
+
+    password_input = Entry(user_window, width=50, show="*")
+    password_input.pack(ipady=10, pady=(5, 15))
+
+    # Function to handle login logic
+    def handle_login():
+        email = email_input.get()
+        password = password_input.get()
+
+        if email == 'user@gmail.com' and password == 'abc':
+            messagebox.showinfo('Success', 'Login successful!')
+        else:
+            messagebox.showinfo('Error', 'Login failed!')
+
+    # Add login button
+    login_button = Button(user_window, text="Login", command=handle_login, bg="green", fg="white")
+    login_button.pack(pady=(20, 20))
 
 # Main window
 tele = Tk()
