@@ -1,0 +1,25 @@
+INFO 2024-09-14 10:15:32 - User 'harry' registered successfully.
+ERROR 2024-09-14 10:16:04 - Login attempt failed for user: 'ian'
+INFO 2024-09-14 10:17:50 - User 'jake' logged in successfully.
+ERROR 2024-09-14 10:18:23 - Login attempt failed for user: 'kyle'
+INFO 2024-09-14 10:20:10 - User 'leo' registered successfully.
+ERROR 2024-09-14 10:21:37 - Login attempt failed for user: 'mike'
+INFO 2024-09-14 10:25:44 - User 'nina' logged in successfully.
+ERROR 2024-09-14 10:26:12 - Login attempt failed for user: 'oliver'
+INFO 2024-09-14 10:28:45 - User 'peter' logged in successfully.
+ERROR 2024-09-14 10:30:21 - Login attempt failed for user: 'rachel'
+INFO 2024-09-14 10:32:15 - User 'steve' logged in successfully.
+INFO 2024-09-14 10:33:44 - User 'tony' logged in successfully.
+ERROR 2024-09-14 10:34:59 - Login attempt failed for user: 'ursula'
+INFO 2024-09-14 10:36:18 - User 'victor' logged in successfully.
+INFO 2024-09-14 10:37:55 - User 'wendy' registered successfully.
+ERROR 2024-09-14 10:38:31 - Login attempt failed for user: 'yolanda'
+INFO 2024-09-14 10:39:18 - User 'zoe' logged in successfully.
+ERROR 2024-09-14 10:41:10 - Login attempt failed for user: 'henry'
+INFO 2024-09-14 10:42:45 - User 'isla' logged in successfully.
+ERROR 2024-09-14 10:44:12 - Login attempt failed for user: 'jackson'
+INFO 2024-09-14 10:46:08 - User 'kelly' logged in successfully.
+ERROR 2024-09-14 10:48:15 - Login attempt failed for user: 'lucas'
+INFO 2024-09-14 10:49:27 - User 'mia' logged in successfully.
+INFO 2024-09-14 10:50:38 - User 'noah' registered successfully.
+ERROR 2024-09-14 10:51:44 - Login attempt failed for user: 'rosie'
